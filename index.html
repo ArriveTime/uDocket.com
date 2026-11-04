@@ -2,319 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>uDocket.com | The Directory of Legal Resources</title>
-
-<meta name="description" content="Explore an independent directory of attorneys, legal AI tools, courts, PACER, public records, legal research, government agencies and legal education resources.">
-
-<meta name="keywords" content="legal directory, attorneys, law firms, legal AI, PACER, federal courts, legal research, public records, law schools, legal resources">
-
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uDocket.com | Independent Directory of Legal Resources</title>
+<meta name="description" content="Explore an independent directory of attorney licensing resources, courts, legal AI, PACER, public records, legal research, government agencies and legal education.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://udocket.com/">
-
 <meta property="og:title" content="uDocket.com | The Directory of Legal Resources">
-<meta property="og:description" content="One destination for attorneys, courts, legal AI, research and legal resources.">
+<meta property="og:description" content="Find attorney directories, courts, legal AI, public records and legal research resources.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://udocket.com/">
-
 <meta name="theme-color" content="#142943">
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"WebSite",
- "name":"uDocket.com",
- "url":"https://udocket.com/",
- "description":"Independent directory of legal information and resources.",
- "potentialAction":{
-   "@type":"SearchAction",
-   "target":"https://udocket.com/?q={search_term_string}",
-   "query-input":"required name=search_term_string"
- }
-}
-</script>
 
 <style>
 :root {
  --navy:#142943;
  --blue:#24588a;
- --light:#f3f6fa;
  --gold:#c5a66a;
- --text:#243247;
- --muted:#64748b;
- --white:#ffffff;
+ --ink:#243247;
+ --muted:#627187;
+ --bg:#f4f7fa;
+ --line:#dfe6ee;
 }
-
 * {box-sizing:border-box}
-
+html {scroll-behavior:smooth;scroll-padding-top:22px}
 body {
- margin:0;
- font-family:Arial,Helvetica,sans-serif;
- color:var(--text);
- background:#f5f7fa;
- line-height:1.6;
+ margin:0;background:var(--bg);color:var(--ink);
+ font:16px/1.6 Arial,Helvetica,sans-serif;
 }
-
-header {
- background:var(--navy);
- color:white;
- padding:22px 6%;
+a {color:#20588d}
+a:focus,button:focus,input:focus {
+ outline:3px solid #d5ad60;outline-offset:2px;
 }
-
-.header-inner {
- max-width:1250px;
- margin:auto;
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:20px;
- flex-wrap:wrap;
+header {background:var(--navy);color:white;padding:18px 5%}
+.head {
+ max-width:1250px;margin:auto;display:flex;
+ justify-content:space-between;align-items:center;
+ gap:18px;flex-wrap:wrap;
 }
-
-.logo {
- font-size:34px;
- font-weight:800;
- letter-spacing:-1.5px;
- color:white;
- text-decoration:none;
+.brand {
+ font-size:34px;line-height:1;font-weight:800;
+ letter-spacing:-1px;color:white;text-decoration:none;
 }
-
-.logo span {color:var(--gold)}
-
-nav {
- display:flex;
- flex-wrap:wrap;
- gap:20px;
-}
-
-nav a {
- color:white;
- text-decoration:none;
- font-size:14px;
- font-weight:bold;
-}
-
-nav a:hover {color:var(--gold)}
-
+.brand span {color:var(--gold)}
+nav {display:flex;gap:18px;flex-wrap:wrap}
+nav a {color:white;text-decoration:none;font-size:14px;font-weight:bold}
 .hero {
- background:linear-gradient(120deg,#142943,#244d73);
- color:white;
- text-align:center;
- padding:75px 20px 65px;
+ background:linear-gradient(120deg,#142943,#28577e);
+ color:white;text-align:center;padding:62px 18px 54px;
 }
-
 .hero h1 {
- font-size:clamp(34px,5vw,57px);
- line-height:1.15;
- margin:0 0 15px;
- letter-spacing:-1.5px;
+ font-size:clamp(32px,5vw,54px);line-height:1.12;
+ margin:0 0 14px;letter-spacing:-1px;
 }
-
 .hero p {
- font-size:19px;
- max-width:750px;
- margin:0 auto 30px;
- color:#dce7f2;
+ max-width:780px;margin:0 auto 25px;
+ color:#e1eaf3;font-size:18px;
 }
-
-.search {
- max-width:760px;
- margin:auto;
- display:flex;
- background:white;
- padding:7px;
- border-radius:8px;
+.search-wrap {
+ max-width:800px;margin:auto;background:white;
+ border-radius:9px;padding:7px;display:flex;
  box-shadow:0 8px 25px #0003;
 }
-
-.search input {
- flex:1;
- min-width:0;
- border:0;
- outline:0;
- padding:15px;
- font-size:17px;
+.search-wrap input {
+ flex:1;min-width:0;border:0;padding:14px;
+ font-size:17px;color:#172b43;outline:none;
 }
-
-.search button {
- background:var(--gold);
- color:#172a40;
- border:0;
- padding:0 24px;
- border-radius:5px;
- font-weight:bold;
- cursor:pointer;
+.search-wrap button {
+ border:0;border-radius:6px;padding:0 22px;
+ background:var(--gold);font-weight:bold;
+ color:#172b43;cursor:pointer;
 }
-
-.container {
- max-width:1250px;
- margin:auto;
- padding:45px 22px;
+.hint {font-size:12px;color:#dce7f1;margin-top:10px}
+main {max-width:1250px;margin:auto;padding:35px 20px 55px}
+.intro {text-align:center;margin:0 auto 28px;max-width:800px}
+.intro h2 {color:var(--navy);font-size:28px;margin:0 0 5px}
+.intro p {color:var(--muted);margin:0}
+.tiles {
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:14px;margin:24px 0 44px;
 }
-
-.section-heading {
- text-align:center;
- margin-bottom:30px;
+.tile {
+ display:block;text-decoration:none;color:var(--ink);
+ background:white;border:1px solid var(--line);
+ border-radius:9px;padding:19px;transition:.15s;
 }
-
-.section-heading h2 {
- font-size:29px;
- color:var(--navy);
- margin-bottom:5px;
+.tile:hover {
+ border-color:var(--gold);transform:translateY(-2px);
+ box-shadow:0 5px 18px #14294312;
 }
-
-.section-heading p {color:var(--muted)}
-
-.categories {
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:16px;
- margin-bottom:45px;
+.tile .icon {font-size:27px}
+.tile strong {
+ display:block;color:var(--navy);font-size:17px;margin:5px 0;
 }
-
-.category {
- background:white;
- padding:22px;
- border-radius:9px;
- border:1px solid #e3e9f0;
- cursor:pointer;
- transition:.2s;
+.tile small {color:var(--muted);font-size:13px}
+.section {margin:0 0 42px;scroll-margin-top:18px}
+.section-head {
+ display:flex;align-items:end;justify-content:space-between;
+ gap:12px;flex-wrap:wrap;border-bottom:2px solid #dbe3ec;
+ padding-bottom:10px;margin-bottom:15px;
 }
-
-.category:hover,.category.active {
- border-color:var(--gold);
- box-shadow:0 5px 18px #14294315;
- transform:translateY(-2px);
+.section-head h2 {color:var(--navy);font-size:25px;margin:0}
+.section-head p {color:var(--muted);font-size:13px;margin:0}
+.cards {
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+ gap:14px;
 }
-
-.category .symbol {
- font-size:29px;
- margin-bottom:8px;
+.card {
+ background:white;border:1px solid var(--line);
+ border-radius:9px;padding:18px;display:flex;
+ flex-direction:column;min-height:165px;
 }
-
-.category h3 {
- margin:0 0 5px;
- color:var(--navy);
- font-size:17px;
-}
-
-.category p {
- margin:0;
- color:var(--muted);
- font-size:13px;
-}
-
-.directory-header {
- display:flex;
- justify-content:space-between;
- align-items:center;
- flex-wrap:wrap;
- gap:12px;
- margin-bottom:18px;
-}
-
-.directory-header h2 {
- color:var(--navy);
- margin:0;
-}
-
-#resultCount {
- color:var(--muted);
- font-size:14px;
-}
-
-.directory {
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
- gap:17px;
-}
-
-.listing {
- background:white;
- border:1px solid #e2e8f0;
- border-radius:9px;
- padding:21px;
- display:flex;
- flex-direction:column;
- min-height:190px;
-}
-
-.listing h3 {
- margin:0 0 8px;
- color:var(--navy);
- font-size:19px;
-}
-
-.listing p {
- color:var(--muted);
- font-size:14px;
- margin:0 0 15px;
- flex:1;
-}
-
+.card[hidden] {display:none!important}
 .tag {
- font-size:11px;
- color:#315b84;
- background:#edf3f9;
- border-radius:20px;
- padding:4px 9px;
- display:inline-block;
- width:max-content;
- margin-bottom:10px;
- font-weight:bold;
+ display:inline-block;align-self:flex-start;
+ background:#edf3f8;color:#315b84;border-radius:20px;
+ padding:3px 9px;font-size:10px;font-weight:bold;
+ letter-spacing:.3px;margin-bottom:9px;
 }
-
-.listing a {
- color:#24588a;
- font-weight:bold;
- text-decoration:none;
- font-size:14px;
+.card h3 {font-size:18px;color:var(--navy);margin:0 0 7px}
+.card p {font-size:14px;color:var(--muted);margin:0 0 13px;flex:1}
+.card a {font-weight:bold;text-decoration:none;font-size:14px}
+.card a:hover {text-decoration:underline}
+.state-grid {
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+ gap:9px;
 }
-
-.listing a:hover {text-decoration:underline}
-
-.disclaimer {
- background:#eaf0f6;
- border-left:4px solid var(--gold);
- padding:25px;
- border-radius:5px;
- margin-top:40px;
+.state-link {
+ display:block;background:white;border:1px solid var(--line);
+ border-radius:7px;padding:11px;text-decoration:none;
+ font-weight:bold;color:#234b70;font-size:14px;
 }
-
-.disclaimer h3 {color:var(--navy)}
-
+.state-link:hover {border-color:var(--gold);background:#fffdf8}
+.note {
+ background:#eaf0f6;border-left:4px solid var(--gold);
+ padding:18px 20px;border-radius:5px;margin:25px 0;
+}
+.note h2,.note h3 {color:var(--navy);margin:0 0 8px}
+.note p {margin:7px 0;font-size:14px}
+#resultsStatus {font-size:14px;color:var(--muted);margin:12px 0 22px}
+.no-results {
+ display:none;background:white;padding:24px;
+ border:1px solid var(--line);border-radius:8px;
+ text-align:center;color:var(--muted);
+}
 footer {
- background:var(--navy);
- color:#dce5ee;
- padding:35px 20px;
- text-align:center;
+ background:var(--navy);color:#dce5ee;
+ text-align:center;padding:30px 18px;
 }
-
-footer a {
- color:#e3c98f;
- text-decoration:none;
- margin:0 9px;
-}
-
-footer p {
- font-size:13px;
- max-width:850px;
- margin:15px auto;
-}
-
-.empty {
- text-align:center;
- padding:35px;
- color:var(--muted);
- display:none;
-}
-
+footer .brand {display:inline-block;margin-bottom:12px}
+footer p {max-width:900px;margin:9px auto;font-size:13px}
+footer a {color:#e3c98f;margin:0 8px}
 @media(max-width:600px) {
- header {padding:18px}
- .hero {padding:55px 18px}
- .search button {padding:0 12px}
- .container {padding:32px 16px}
+ header {padding:17px}
+ .brand {font-size:30px}
+ .hero {padding:48px 15px}
+ .search-wrap button {padding:0 13px}
+ .search-wrap input {font-size:15px;padding:12px}
+ main {padding:28px 14px 40px}
  nav {gap:12px}
 }
 </style>
@@ -323,457 +166,543 @@ footer p {
 <body>
 
 <header>
- <div class="header-inner">
-  <a class="logo" href="/">u<span>Docket</span>.com</a>
-
-  <nav>
-   <a href="#categories">DIRECTORY</a>
-   <a href="#directory">RESOURCES</a>
+ <div class="head">
+  <a class="brand" href="#top" aria-label="uDocket home">u<span>Docket</span>.com</a>
+  <nav aria-label="Main navigation">
+   <a href="#attorneys">ATTORNEYS</a>
+   <a href="#legal-ai">LEGAL AI</a>
+   <a href="#courts">COURTS</a>
+   <a href="#records">RECORDS</a>
+   <a href="#research">RESEARCH</a>
    <a href="#about">ABOUT</a>
-   <a href="#disclaimer">DISCLAIMER</a>
   </nav>
  </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="top">
  <h1>THE WORLD OF LAW.<br>ONE DESTINATION.</h1>
+ <p>An independent directory connecting the public with attorney licensing resources, courts, legal technology, public records and legal research.</p>
+ <form class="search-wrap" id="searchForm" role="search">
+  <input id="searchInput" type="search"
+   placeholder="Try: Virginia attorney, PACER, legal AI, bankruptcy court..."
+   aria-label="Search all legal resources">
+  <button type="submit">SEARCH</button>
+ </form>
+ <div class="hint">Search names, categories, descriptions, states and related keywords.</div>
+</section>
 
- <p>
- Discover attorneys, courts, legal technology,
- research platforms, government resources
- and the tools of the legal profession.
- </p>
+<main>
 
- <div class="search">
-  <input id="searchInput"
-   type="search"
-   placeholder="Search legal resources, courts, AI, PACER..."
-   aria-label="Search legal directory">
-  <button onclick="searchDirectory()">SEARCH</button>
+<div class="intro">
+ <h2>Explore the Legal World</h2>
+ <p>Select a department below to jump directly to its resources. Or search the entire directory.</p>
+</div>
+
+<div class="tiles" aria-label="Directory categories">
+
+ <a class="tile" href="#attorneys">
+  <span class="icon">⚖</span>
+  <strong>Attorneys & Law Firms</strong>
+  <small>Official state licensing and lawyer-search resources</small>
+ </a>
+
+ <a class="tile" href="#legal-ai">
+  <span class="icon">✦</span>
+  <strong>Legal AI & Technology</strong>
+  <small>AI research, drafting and legal software</small>
+ </a>
+
+ <a class="tile" href="#courts">
+  <span class="icon">🏛</span>
+  <strong>Courts & Judiciary</strong>
+  <small>Federal and state court systems</small>
+ </a>
+
+ <a class="tile" href="#records">
+  <span class="icon">▤</span>
+  <strong>Public Records & PACER</strong>
+  <small>Dockets, filings and public information</small>
+ </a>
+
+ <a class="tile" href="#research">
+  <span class="icon">⌕</span>
+  <strong>Legal Research</strong>
+  <small>Case law, statutes and legal publications</small>
+ </a>
+
+ <a class="tile" href="#government">
+  <span class="icon">◆</span>
+  <strong>Government & Legislation</strong>
+  <small>Agencies, laws and regulations</small>
+ </a>
+
+ <a class="tile" href="#education">
+  <span class="icon">▣</span>
+  <strong>Legal Education</strong>
+  <small>Law schools, LSAT and bar resources</small>
+ </a>
+
+ <a class="tile" href="#organizations">
+  <span class="icon">◎</span>
+  <strong>Legal Organizations</strong>
+  <small>Bar associations and professional groups</small>
+ </a>
+
+</div>
+
+<div id="resultsStatus" aria-live="polite">Browse all resources below.</div>
+<div class="no-results" id="noResults">No matching resources found. Try a different word or search phrase.</div>
+
+<!-- ATTORNEYS -->
+
+<section class="section" id="attorneys">
+ <div class="section-head">
+  <h2>Attorneys & Law Firms</h2>
+  <p>Official licensing and directory resources</p>
+ </div>
+
+ <div class="cards">
+
+  <article class="card" data-keywords="attorney lawyer lawyers license licensing lookup verify verification state bar directory all states 50 state dc disciplinary status good standing">
+   <span class="tag">ALL STATES</span>
+   <h3>ABA — State Lawyer Licensing Agencies</h3>
+   <p>Find the agency in each state responsible for attorney licensing and learn where to verify a lawyer's license. Some jurisdictions require a phone inquiry.</p>
+   <a href="https://www.americanbar.org/groups/legal_services/flh-home/flh-lawyer-licensing/" target="_blank" rel="noopener noreferrer">Open state licensing directory ↗</a>
+  </article>
+
+  <article class="card" data-keywords="attorney lawyer find a lawyer lawyer finder bar association referral local state directory">
+   <span class="tag">LAWYER FINDERS</span>
+   <h3>ABA — Bar Directories & Lawyer Finders</h3>
+   <p>State and local bar association lawyer-finder resources. Availability and services vary by jurisdiction.</p>
+   <a href="https://www.americanbar.org/groups/legal_services/flh-home/flh-bar-directories-and-lawyer-finders/" target="_blank" rel="noopener noreferrer">Open lawyer-finder directory ↗</a>
+  </article>
+
+  <article class="card" data-keywords="attorney lawyer public discipline complaint grievance ethics misconduct disciplinary agency">
+   <span class="tag">ATTORNEY DISCIPLINE</span>
+   <h3>ABA — Lawyer Disciplinary Agencies</h3>
+   <p>Locate attorney disciplinary authorities. Contact the relevant jurisdiction for current procedures and records.</p>
+   <a href="https://www.americanbar.org/groups/professional_responsibility/resources/client_protection/" target="_blank" rel="noopener noreferrer">Explore ABA resources ↗</a>
+  </article>
+
+  <article class="card" data-keywords="California attorney lawyer license search discipline profile">
+   <span class="tag">CALIFORNIA</span>
+   <h3>State Bar of California</h3>
+   <p>Official resources to find legal professionals and review attorney profiles and license information.</p>
+   <a href="https://www.calbar.ca.gov/public/find-legal-professionals" target="_blank" rel="noopener noreferrer">Find legal professionals ↗</a>
+  </article>
+
+  <article class="card" data-keywords="Florida attorney lawyer license member search bar">
+   <span class="tag">FLORIDA</span>
+   <h3>The Florida Bar</h3>
+   <p>Official member directory and attorney information.</p>
+   <a href="https://www.floridabar.org/directories/find-mbr/" target="_blank" rel="noopener noreferrer">Find a Florida lawyer ↗</a>
+  </article>
+
+  <article class="card" data-keywords="Virginia attorney lawyer license directory bar">
+   <span class="tag">VIRGINIA</span>
+   <h3>Virginia State Bar</h3>
+   <p>Public resources and lawyer directory information.</p>
+   <a href="https://vsb.org/" target="_blank" rel="noopener noreferrer">Visit Virginia State Bar ↗</a>
+  </article>
+
+  <article class="card" data-keywords="Texas attorney lawyer license search bar directory">
+   <span class="tag">TEXAS</span>
+   <h3>State Bar of Texas</h3>
+   <p>Attorney search and public information from the state bar.</p>
+   <a href="https://www.texasbar.com/" target="_blank" rel="noopener noreferrer">Visit State Bar of Texas ↗</a>
+  </article>
+
+  <article class="card" data-keywords="New York attorney lawyer registration search court directory">
+   <span class="tag">NEW YORK</span>
+   <h3>New York Courts</h3>
+   <p>Official New York court system and attorney registration resources.</p>
+   <a href="https://www.nycourts.gov/" target="_blank" rel="noopener noreferrer">Visit New York Courts ↗</a>
+  </article>
+
+ </div>
+
+ <div class="note">
+  <h3>Important when checking an attorney</h3>
+  <p>Attorney licenses are issued by individual jurisdictions. Check the official licensing authority for the state where the attorney is admitted. A directory listing is not a recommendation or a guarantee of current good standing.</p>
+ </div>
+
+ <h3 style="color:#142943">Browse official state licensing resources</h3>
+ <p style="color:#627187;font-size:14px">Choose a state to open the American Bar Association's state-by-state licensing resource. From there, select the appropriate jurisdiction and follow its official verification instructions.</p>
+
+ <div class="state-grid" id="stateGrid"></div>
+</section>
+
+<!-- LEGAL AI -->
+
+<section class="section" id="legal-ai">
+ <div class="section-head">
+  <h2>Legal AI & Technology</h2>
+  <p>External platforms; features and terms are set by each provider</p>
+ </div>
+
+ <div class="cards">
+
+  <article class="card" data-keywords="legal ai artificial intelligence lawyer law firm research document analysis drafting Harvey">
+   <span class="tag">LEGAL AI</span>
+   <h3>Harvey</h3>
+   <p>AI technology designed for legal and professional work.</p>
+   <a href="https://www.harvey.ai/" target="_blank" rel="noopener noreferrer">Visit Harvey ↗</a>
+  </article>
+
+  <article class="card" data-keywords="legal ai artificial intelligence research westlaw co counsel thomson reuters">
+   <span class="tag">LEGAL RESEARCH & AI</span>
+   <h3>Thomson Reuters Legal</h3>
+   <p>Legal research, information and professional technology.</p>
+   <a href="https://legal.thomsonreuters.com/" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
+  </article>
+
+  <article class="card" data-keywords="LexisNexis legal AI research lawyers">
+   <span class="tag">LEGAL RESEARCH & AI</span>
+   <h3>LexisNexis</h3>
+   <p>Legal research and information services, including AI products.</p>
+   <a href="https://www.lexisnexis.com/" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
+  </article>
+
+  <article class="card" data-keywords="vLex Vincent AI legal research">
+   <span class="tag">LEGAL AI</span>
+   <h3>vLex</h3>
+   <p>Legal research and AI-powered legal information tools.</p>
+   <a href="https://vlex.com/" target="_blank" rel="noopener noreferrer">Visit vLex ↗</a>
+  </article>
+
+  <article class="card" data-keywords="Spellbook contract AI drafting review legal technology">
+   <span class="tag">CONTRACT AI</span>
+   <h3>Spellbook</h3>
+   <p>AI-assisted contract drafting and review tools.</p>
+   <a href="https://www.spellbook.legal/" target="_blank" rel="noopener noreferrer">Visit Spellbook ↗</a>
+  </article>
+
  </div>
 </section>
 
-<main class="container">
+<!-- COURTS -->
 
- <section id="categories">
-  <div class="section-heading">
-   <h2>Explore the Legal World</h2>
-   <p>Browse the major areas of the legal industry.</p>
-  </div>
+<section class="section" id="courts">
+ <div class="section-head">
+  <h2>Courts & Judiciary</h2>
+  <p>Official court websites</p>
+ </div>
 
-  <div class="categories">
+ <div class="cards">
 
-   <div class="category" data-filter="attorneys">
-    <div class="symbol">⚖</div>
-    <h3>Attorneys & Law Firms</h3>
-    <p>Official lawyer directories and licensing resources.</p>
-   </div>
+  <article class="card" data-keywords="federal courts judiciary district circuit appeals bankruptcy court">
+   <span class="tag">FEDERAL</span>
+   <h3>United States Courts</h3>
+   <p>Information about federal district, appellate and bankruptcy courts.</p>
+   <a href="https://www.uscourts.gov/" target="_blank" rel="noopener noreferrer">Visit U.S. Courts ↗</a>
+  </article>
 
-   <div class="category" data-filter="ai">
-    <div class="symbol">✦</div>
-    <h3>Legal Artificial Intelligence</h3>
-    <p>AI platforms and legal technology.</p>
-   </div>
+  <article class="card" data-keywords="supreme court highest court opinions docket">
+   <span class="tag">SUPREME COURT</span>
+   <h3>Supreme Court of the United States</h3>
+   <p>Official opinions, docket information, oral arguments and court resources.</p>
+   <a href="https://www.supremecourt.gov/" target="_blank" rel="noopener noreferrer">Visit Supreme Court ↗</a>
+  </article>
 
-   <div class="category" data-filter="courts">
-    <div class="symbol">🏛</div>
-    <h3>Courts & Judiciary</h3>
-    <p>Federal and state court systems.</p>
-   </div>
+  <article class="card" data-keywords="state courts judiciary court websites all states">
+   <span class="tag">STATE COURTS</span>
+   <h3>National Center for State Courts</h3>
+   <p>Resources and information about state court systems.</p>
+   <a href="https://www.ncsc.org/" target="_blank" rel="noopener noreferrer">Visit NCSC ↗</a>
+  </article>
 
-   <div class="category" data-filter="records">
-    <div class="symbol">▤</div>
-    <h3>Public Records & PACER</h3>
-    <p>Court dockets, filings and public records.</p>
-   </div>
+ </div>
+</section>
 
-   <div class="category" data-filter="research">
-    <div class="symbol">⌕</div>
-    <h3>Legal Research</h3>
-    <p>Case law, statutes and legal publications.</p>
-   </div>
+<!-- RECORDS -->
 
-   <div class="category" data-filter="government">
-    <div class="symbol">◆</div>
-    <h3>Government & Legislation</h3>
-    <p>Federal agencies, laws and regulations.</p>
-   </div>
+<section class="section" id="records">
+ <div class="section-head">
+  <h2>Public Records & PACER</h2>
+  <p>External court record and docket systems</p>
+ </div>
 
-   <div class="category" data-filter="education">
-    <div class="symbol">▣</div>
-    <h3>Legal Education</h3>
-    <p>Law schools, bar exams and legal learning.</p>
-   </div>
+ <div class="cards">
 
-   <div class="category" data-filter="organizations">
-    <div class="symbol">◎</div>
-    <h3>Legal Organizations</h3>
-    <p>Bar associations and professional resources.</p>
-   </div>
+  <article class="card" data-keywords="PACER federal court records docket filings case search public access fees login">
+   <span class="tag">FEDERAL COURT RECORDS</span>
+   <h3>PACER</h3>
+   <p>Official federal court electronic public access system. Registration and fees may apply.</p>
+   <a href="https://pacer.uscourts.gov/" target="_blank" rel="noopener noreferrer">Visit PACER ↗</a>
+  </article>
 
-  </div>
- </section>
+  <article class="card" data-keywords="RECAP free federal court documents archive docket filings">
+   <span class="tag">COURT DOCUMENTS</span>
+   <h3>RECAP Archive</h3>
+   <p>Search an archive of federal court documents available through CourtListener.</p>
+   <a href="https://www.courtlistener.com/recap/" target="_blank" rel="noopener noreferrer">Visit RECAP ↗</a>
+  </article>
 
- <section id="directory">
+  <article class="card" data-keywords="CourtListener opinions dockets federal court records public documents">
+   <span class="tag">PUBLIC LEGAL DATA</span>
+   <h3>CourtListener</h3>
+   <p>Search judicial opinions, federal dockets and legal documents.</p>
+   <a href="https://www.courtlistener.com/" target="_blank" rel="noopener noreferrer">Visit CourtListener ↗</a>
+  </article>
 
-  <div class="directory-header">
-   <h2>Legal Resource Directory</h2>
-   <span id="resultCount"></span>
-  </div>
+ </div>
+</section>
 
-  <div class="directory" id="directoryGrid">
+<!-- RESEARCH -->
 
-   <!-- ATTORNEY RESOURCES -->
+<section class="section" id="research">
+ <div class="section-head">
+  <h2>Legal Research</h2>
+  <p>Case law, statutes and legal publications</p>
+ </div>
 
-   <article class="listing" data-category="attorneys">
-    <span class="tag">ATTORNEYS</span>
-    <h3>ABA Lawyer Finders</h3>
-    <p>Find state and local bar association lawyer-search resources.</p>
-    <a href="https://www.americanbar.org/groups/legal_services/flh-home/flh-bar-directories-and-lawyer-finders/"
-       target="_blank" rel="noopener noreferrer">Visit Official Directory ↗</a>
-   </article>
+ <div class="cards">
 
-   <article class="listing" data-category="attorneys">
-    <span class="tag">ATTORNEY LICENSING</span>
-    <h3>ABA Lawyer Licensing</h3>
-    <p>Locate state agencies responsible for attorney licensing.</p>
-    <a href="https://www.americanbar.org/groups/legal_services/flh-home/flh-lawyer-licensing/"
-       target="_blank" rel="noopener noreferrer">Visit Resource ↗</a>
-   </article>
+  <article class="card" data-keywords="Cornell LII legal information institute statutes regulations constitution code">
+   <span class="tag">FREE LEGAL INFORMATION</span>
+   <h3>Cornell Legal Information Institute</h3>
+   <p>Legal information, statutes, regulations and other legal materials.</p>
+   <a href="https://www.law.cornell.edu/" target="_blank" rel="noopener noreferrer">Visit LII ↗</a>
+  </article>
 
-   <article class="listing" data-category="attorneys">
-    <span class="tag">ATTORNEY INFORMATION</span>
-    <h3>ABA Public Resources</h3>
-    <p>Information about finding lawyers and attorney disciplinary agencies.</p>
-    <a href="https://www.americanbar.org/groups/professional_responsibility/resources/resources_for_the_public/"
-       target="_blank" rel="noopener noreferrer">Visit Resource ↗</a>
-   </article>
+  <article class="card" data-keywords="Google Scholar case law court opinions scholarly articles">
+   <span class="tag">CASE LAW & SCHOLARSHIP</span>
+   <h3>Google Scholar</h3>
+   <p>Search scholarly literature and available court opinions.</p>
+   <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Visit Google Scholar ↗</a>
+  </article>
 
-   <!-- LEGAL AI -->
+  <article class="card" data-keywords="Justia cases codes regulations legal research">
+   <span class="tag">LEGAL RESEARCH</span>
+   <h3>Justia</h3>
+   <p>Access cases, codes, regulations and legal information.</p>
+   <a href="https://law.justia.com/" target="_blank" rel="noopener noreferrer">Visit Justia ↗</a>
+  </article>
 
-   <article class="listing" data-category="ai">
-    <span class="tag">LEGAL AI</span>
-    <h3>Harvey</h3>
-    <p>Artificial intelligence technology developed for legal and professional work.</p>
-    <a href="https://www.harvey.ai/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+ </div>
+</section>
 
-   <article class="listing" data-category="ai">
-    <span class="tag">LEGAL AI</span>
-    <h3>Thomson Reuters</h3>
-    <p>Legal research, information and AI-powered professional technology.</p>
-    <a href="https://legal.thomsonreuters.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+<!-- GOVERNMENT -->
 
-   <article class="listing" data-category="ai">
-    <span class="tag">LEGAL AI</span>
-    <h3>LexisNexis</h3>
-    <p>Legal research, analytics and artificial intelligence products.</p>
-    <a href="https://www.lexisnexis.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+<section class="section" id="government">
+ <div class="section-head">
+  <h2>Government & Legislation</h2>
+  <p>Official government information</p>
+ </div>
 
-   <article class="listing" data-category="ai">
-    <span class="tag">LEGAL TECHNOLOGY</span>
-    <h3>vLex</h3>
-    <p>Legal research and artificial intelligence technology.</p>
-    <a href="https://vlex.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+ <div class="cards">
 
-   <article class="listing" data-category="ai">
-    <span class="tag">LEGAL AI</span>
-    <h3>Spellbook</h3>
-    <p>AI-assisted contract review and drafting technology.</p>
-    <a href="https://www.spellbook.legal/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+  <article class="card" data-keywords="Congress legislation bills laws house senate federal">
+   <span class="tag">FEDERAL LEGISLATION</span>
+   <h3>Congress.gov</h3>
+   <p>Official information about bills, laws and congressional activity.</p>
+   <a href="https://www.congress.gov/" target="_blank" rel="noopener noreferrer">Visit Congress.gov ↗</a>
+  </article>
 
-   <!-- COURTS -->
+  <article class="card" data-keywords="GovInfo federal government publications regulations code US code">
+   <span class="tag">GOVERNMENT PUBLICATIONS</span>
+   <h3>GovInfo</h3>
+   <p>Official government publications, statutes and federal documents.</p>
+   <a href="https://www.govinfo.gov/" target="_blank" rel="noopener noreferrer">Visit GovInfo ↗</a>
+  </article>
 
-   <article class="listing" data-category="courts">
-    <span class="tag">FEDERAL COURTS</span>
-    <h3>United States Courts</h3>
-    <p>Official information about the federal judicial system.</p>
-    <a href="https://www.uscourts.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+  <article class="card" data-keywords="USPTO patent trademark intellectual property search">
+   <span class="tag">INTELLECTUAL PROPERTY</span>
+   <h3>U.S. Patent and Trademark Office</h3>
+   <p>Official patent and trademark information and search tools.</p>
+   <a href="https://www.uspto.gov/" target="_blank" rel="noopener noreferrer">Visit USPTO ↗</a>
+  </article>
 
-   <article class="listing" data-category="courts">
-    <span class="tag">SUPREME COURT</span>
-    <h3>U.S. Supreme Court</h3>
-    <p>Official opinions, docket information and court resources.</p>
-    <a href="https://www.supremecourt.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+ </div>
+</section>
 
-   <article class="listing" data-category="courts">
-    <span class="tag">STATE COURTS</span>
-    <h3>National Center for State Courts</h3>
-    <p>Resources and links to state court systems.</p>
-    <a href="https://www.ncsc.org/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+<!-- EDUCATION -->
 
-   <!-- PUBLIC RECORDS -->
+<section class="section" id="education">
+ <div class="section-head">
+  <h2>Legal Education</h2>
+  <p>Law school and professional education resources</p>
+ </div>
 
-   <article class="listing" data-category="records">
-    <span class="tag">FEDERAL RECORDS</span>
-    <h3>PACER</h3>
-    <p>Official federal court electronic public access system. Fees may apply.</p>
-    <a href="https://pacer.uscourts.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+ <div class="cards">
 
-   <article class="listing" data-category="records">
-    <span class="tag">COURT DOCUMENTS</span>
-    <h3>RECAP Archive</h3>
-    <p>Search a public archive of federal court documents and docket information.</p>
-    <a href="https://www.courtlistener.com/recap/"
-       target="_blank" rel="noopener noreferrer">Visit Archive ↗</a>
-   </article>
+  <article class="card" data-keywords="LSAC law school admission council LSAT law school applications">
+   <span class="tag">LAW SCHOOL ADMISSIONS</span>
+   <h3>LSAC</h3>
+   <p>Law school admission information and LSAT resources.</p>
+   <a href="https://www.lsac.org/" target="_blank" rel="noopener noreferrer">Visit LSAC ↗</a>
+  </article>
 
-   <article class="listing" data-category="records">
-    <span class="tag">PUBLIC COURT RECORDS</span>
-    <h3>CourtListener</h3>
-    <p>Search judicial opinions, federal dockets and legal documents.</p>
-    <a href="https://www.courtlistener.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+  <article class="card" data-keywords="ABA legal education law schools accreditation">
+   <span class="tag">LEGAL EDUCATION</span>
+   <h3>ABA Legal Education</h3>
+   <p>Information about legal education and ABA-approved law schools.</p>
+   <a href="https://www.americanbar.org/groups/legal_education/" target="_blank" rel="noopener noreferrer">Visit ABA Legal Education ↗</a>
+  </article>
 
-   <!-- LEGAL RESEARCH -->
+  <article class="card" data-keywords="NCBE bar exam UBE MPRE character fitness bar admission">
+   <span class="tag">BAR EXAMINATIONS</span>
+   <h3>National Conference of Bar Examiners</h3>
+   <p>Information about bar examination components and assessment resources.</p>
+   <a href="https://www.ncbex.org/" target="_blank" rel="noopener noreferrer">Visit NCBE ↗</a>
+  </article>
 
-   <article class="listing" data-category="research">
-    <span class="tag">LEGAL RESEARCH</span>
-    <h3>Cornell Legal Information Institute</h3>
-    <p>Free access to legal information, statutes and regulations.</p>
-    <a href="https://www.law.cornell.edu/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+ </div>
+</section>
 
-   <article class="listing" data-category="research">
-    <span class="tag">CASE LAW</span>
-    <h3>Google Scholar</h3>
-    <p>Search scholarly literature and available court opinions.</p>
-    <a href="https://scholar.google.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+<!-- ORGANIZATIONS -->
 
-   <article class="listing" data-category="research">
-    <span class="tag">CASE LAW</span>
-    <h3>Justia</h3>
-    <p>Access legal cases, codes, regulations and legal information.</p>
-    <a href="https://law.justia.com/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
+<section class="section" id="organizations">
+ <div class="section-head">
+  <h2>Legal Organizations</h2>
+  <p>Professional and public-interest organizations</p>
+ </div>
 
-   <!-- GOVERNMENT -->
+ <div class="cards">
 
-   <article class="listing" data-category="government">
-    <span class="tag">FEDERAL LEGISLATION</span>
-    <h3>Congress.gov</h3>
-    <p>Official information about bills, legislation and congressional activity.</p>
-    <a href="https://www.congress.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+  <article class="card" data-keywords="American Bar Association ABA lawyers professional association public">
+   <span class="tag">PROFESSIONAL ORGANIZATION</span>
+   <h3>American Bar Association</h3>
+   <p>Professional resources, publications and information about the legal profession.</p>
+   <a href="https://www.americanbar.org/" target="_blank" rel="noopener noreferrer">Visit ABA ↗</a>
+  </article>
 
-   <article class="listing" data-category="government">
-    <span class="tag">GOVERNMENT PUBLICATIONS</span>
-    <h3>GovInfo</h3>
-    <p>Official government publications, statutes and federal documents.</p>
-    <a href="https://www.govinfo.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+  <article class="card" data-keywords="Free Law Project nonprofit open access legal data court technology">
+   <span class="tag">OPEN LEGAL INFORMATION</span>
+   <h3>Free Law Project</h3>
+   <p>Nonprofit organization supporting open access to legal information and technology.</p>
+   <a href="https://free.law/" target="_blank" rel="noopener noreferrer">Visit Free Law Project ↗</a>
+  </article>
 
-   <article class="listing" data-category="government">
-    <span class="tag">TRADEMARKS & PATENTS</span>
-    <h3>United States Patent and Trademark Office</h3>
-    <p>Official patent and trademark information and search tools.</p>
-    <a href="https://www.uspto.gov/"
-       target="_blank" rel="noopener noreferrer">Visit Official Website ↗</a>
-   </article>
+ </div>
+</section>
 
-   <!-- EDUCATION -->
+<section class="note" id="about">
+ <h2>About uDocket.com</h2>
+ <p>uDocket.com is an independently operated directory of legal information, organizations, professional resources and technology platforms. Its purpose is to make third-party resources easier to discover through organized descriptions and direct links.</p>
+</section>
 
-   <article class="listing" data-category="education">
-    <span class="tag">LEGAL EDUCATION</span>
-    <h3>LSAC</h3>
-    <p>Law school admission information and LSAT resources.</p>
-    <a href="https://www.lsac.org/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
-
-   <article class="listing" data-category="education">
-    <span class="tag">LEGAL EDUCATION</span>
-    <h3>ABA Legal Education</h3>
-    <p>Information about legal education and accredited law schools.</p>
-    <a href="https://www.americanbar.org/groups/legal_education/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
-
-   <!-- ORGANIZATIONS -->
-
-   <article class="listing" data-category="organizations">
-    <span class="tag">PROFESSIONAL ORGANIZATION</span>
-    <h3>American Bar Association</h3>
-    <p>Professional resources, publications and information about the legal profession.</p>
-    <a href="https://www.americanbar.org/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
-
-   <article class="listing" data-category="organizations">
-    <span class="tag">LEGAL RESEARCH ORGANIZATION</span>
-    <h3>Free Law Project</h3>
-    <p>Nonprofit organization supporting open access to legal information and technology.</p>
-    <a href="https://free.law/"
-       target="_blank" rel="noopener noreferrer">Visit Website ↗</a>
-   </article>
-
-  </div>
-
-  <div class="empty" id="emptyMessage">
-   No matching resources found. Try another search.
-  </div>
-
- </section>
-
- <section class="disclaimer" id="about">
-  <h3>About uDocket.com</h3>
-  <p>
-   uDocket.com is an independently operated directory
-   of legal information, organizations, professional
-   resources and technology platforms.
-  </p>
-  <p>
-   Our objective is to make legal resources easier
-   to discover by providing organized information
-   and links to independently operated websites.
-  </p>
- </section>
-
- <section class="disclaimer" id="disclaimer">
-  <h3>Important Disclaimer</h3>
-  <p>
-   uDocket.com is not a law firm, attorney referral
-   service, legal service provider or government agency.
-   We do not provide legal advice, legal representation,
-   case evaluations or legal recommendations.
-  </p>
-  <p>
-   Listings are provided for general informational
-   purposes. Inclusion does not constitute an endorsement
-   or verification of qualifications, services or results.
-   Visitors should independently verify information
-   with the appropriate official sources.
-  </p>
-  <p>
-   External websites are independently operated.
-   Their inclusion does not imply affiliation,
-   sponsorship or endorsement. External websites
-   may have their own terms, fees and privacy policies.
-  </p>
-  <p>
-   Some information may change. We make no guarantee
-   that every external link or listing is current.
-  </p>
- </section>
+<section class="note" id="disclaimer">
+ <h2>Important Directory Disclaimer</h2>
+ <p>uDocket.com is not a law firm, attorney referral service, legal service provider or government agency. It does not provide legal advice, legal representation, case evaluations or individualized recommendations.</p>
+ <p>Listings are provided for general informational purposes. Inclusion is not an endorsement and does not verify qualifications, licensing status, services or results. Visitors should independently verify information with the relevant official authority.</p>
+ <p>External websites are independently operated and have their own content, terms, fees and privacy practices. Their inclusion does not imply affiliation, sponsorship or endorsement. We do not control external websites and cannot guarantee that their information or links remain current.</p>
+</section>
 
 </main>
 
 <footer>
- <div class="logo">u<span>Docket</span>.com</div>
-
+ <a class="brand" href="#top">u<span>Docket</span>.com</a>
+ <p>The independent directory of legal resources.</p>
  <p>
- The independent directory of legal resources.
- One destination for the legal world.
+  <a href="#attorneys">Attorneys</a>
+  <a href="#legal-ai">Legal AI</a>
+  <a href="#courts">Courts</a>
+  <a href="#records">Records</a>
+  <a href="#about">About</a>
+  <a href="#disclaimer">Disclaimer</a>
  </p>
-
- <p>
- <a href="#categories">Directory</a>
- <a href="#about">About</a>
- <a href="#disclaimer">Disclaimer</a>
- </p>
-
- <p>
- © <span id="year"></span> uDocket.com.
- All rights reserved.
- </p>
-
- <p>
- Independent website. Not affiliated with any court,
- government agency, bar association or legal provider.
- </p>
+ <p>© <span id="year"></span> uDocket.com. All rights reserved. Independent website; not affiliated with any court, government agency, bar association or listed provider.</p>
 </footer>
 
 <script>
-const searchInput = document.getElementById("searchInput");
-const cards = [...document.querySelectorAll(".listing")];
-const categories = [...document.querySelectorAll(".category")];
+(function(){
 
-let activeCategory = "all";
+ const input=document.getElementById('searchInput');
+ const form=document.getElementById('searchForm');
+ const cards=Array.from(document.querySelectorAll('.card'));
+ const status=document.getElementById('resultsStatus');
+ const empty=document.getElementById('noResults');
+ const sections=Array.from(document.querySelectorAll('.section'));
 
-function updateDirectory() {
- const query = searchInput.value.toLowerCase().trim();
- let count = 0;
+ const states=[
+ 'Alabama','Alaska','Arizona','Arkansas','California',
+ 'Colorado','Connecticut','Delaware','District of Columbia',
+ 'Florida','Georgia','Hawaii','Idaho','Illinois','Indiana',
+ 'Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland',
+ 'Massachusetts','Michigan','Minnesota','Mississippi','Missouri',
+ 'Montana','Nebraska','Nevada','New Hampshire','New Jersey',
+ 'New Mexico','New York','North Carolina','North Dakota','Ohio',
+ 'Oklahoma','Oregon','Pennsylvania','Rhode Island',
+ 'South Carolina','South Dakota','Tennessee','Texas','Utah',
+ 'Vermont','Virginia','Washington','West Virginia','Wisconsin',
+ 'Wyoming'
+ ];
 
- cards.forEach(card => {
-  const text = card.innerText.toLowerCase();
-  const category = card.dataset.category;
+ const stateGrid=document.getElementById('stateGrid');
 
-  const matchesSearch = text.includes(query);
-  const matchesCategory =
-   activeCategory === "all" ||
-   category === activeCategory;
-
-  const visible = matchesSearch && matchesCategory;
-
-  card.style.display = visible ? "flex" : "none";
-
-  if (visible) count++;
+ states.forEach(state=>{
+  const a=document.createElement('a');
+  a.className='state-link';
+  a.href='https://www.americanbar.org/groups/legal_services/flh-home/flh-lawyer-licensing/';
+  a.target='_blank';
+  a.rel='noopener noreferrer';
+  a.textContent=state+' ↗';
+  a.setAttribute('aria-label','Open ABA state licensing resource for '+state);
+  a.dataset.keywords=(state+' attorney lawyer license licensing bar directory').toLowerCase();
+  stateGrid.appendChild(a);
  });
 
- document.getElementById("resultCount").textContent =
-  count + " resources displayed";
+ function normalize(s){
+  return s.toLowerCase()
+   .normalize('NFD')
+   .replace(/[\u0300-\u036f]/g,'')
+   .replace(/[^a-z0-9\s]/g,' ')
+   .replace(/\s+/g,' ')
+   .trim();
+ }
 
- document.getElementById("emptyMessage").style.display =
-  count ? "none" : "block";
-}
+ function runSearch(){
 
-function searchDirectory() {
- activeCategory = "all";
+  const q=normalize(input.value);
+  const terms=q.split(' ').filter(Boolean);
+  let count=0;
 
- categories.forEach(c => c.classList.remove("active"));
+  cards.forEach(card=>{
+   const hay=normalize((card.innerText||'')+' '+(card.dataset.keywords||''));
+   const match=!q||terms.every(term=>hay.includes(term));
+   card.hidden=!match;
+   if(match)count++;
+  });
 
- updateDirectory();
+  let stateCount=0;
 
- document.getElementById("directory").scrollIntoView({
-  behavior:"smooth"
- });
-}
+  stateGrid.querySelectorAll('a').forEach(a=>{
+   const hay=normalize(a.textContent+' '+a.dataset.keywords);
+   const match=!q||terms.every(term=>hay.includes(term));
+   a.hidden=!match;
+   if(match)stateCount++;
+  });
 
-searchInput.addEventListener("input",updateDirectory);
+  sections.forEach(section=>{
+   const visible=section.querySelectorAll('.card:not([hidden]),.state-link:not([hidden])').length;
+   section.hidden=Boolean(q)&&visible===0;
+  });
 
-categories.forEach(category => {
- category.addEventListener("click",() => {
-  activeCategory = category.dataset.filter;
+  const total=count+stateCount;
 
-  categories.forEach(c => c.classList.remove("active"));
-  category.classList.add("active");
+  status.textContent=q
+   ? total+' matching resource(s) found.'
+   : cards.length+' directory listings and '+states.length+' state licensing links. Browse a category or search above.';
 
-  updateDirectory();
+  empty.style.display=total?'none':'block';
+ }
 
-  document.getElementById("directory").scrollIntoView({
-   behavior:"smooth"
+ form.addEventListener('submit',function(e){
+  e.preventDefault();
+  runSearch();
+  document.getElementById('resultsStatus').scrollIntoView({
+   behavior:'smooth',block:'start'
   });
  });
-});
 
-document.getElementById("year").textContent =
- new Date().getFullYear();
+ input.addEventListener('input',runSearch);
 
-updateDirectory();
+ document.getElementById('year').textContent=new Date().getFullYear();
+
+ runSearch();
+
+})();
 </script>
 
 </body>
